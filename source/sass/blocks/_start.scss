@@ -1,0 +1,100 @@
+.start {
+  background-image: url('../../img/start/bg-start.jpg');
+  background-size: cover;
+  background-position: center;
+  &__flex {
+    display: flex;
+    grid-gap: 1.25rem;
+    margin-bottom: rem(80);
+  }
+  &__flex-item {
+    padding: rem(23) rem(57) rem(45) rem(56);
+    border-radius: 15px;
+    background-color: rgba(17, 17, 16, .6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: rem(60);
+  }
+  &__flex-heading {
+    margin-inline: auto;
+    @include dfc;
+    font-size: rem(22);
+    color: #eeece8;
+    width: rem(161);
+    height: rem(161);
+    background-image: url('../../img/start/icon-overlay.png');
+    background-size: 100% 100%;
+    margin-bottom: rem(40);
+  }
+  &__flex-title {
+    @include gradient-text;
+    font-size: rem(30);
+    text-transform: uppercase;
+    margin-bottom: rem(20);
+  }
+  &__descr {
+    p {
+      color: #a5a5a5;
+      font-size: rem(20);
+      line-height: 150%;
+      font-family: var(--ff-intro);
+    }
+  }
+  &__actions {
+    justify-content: space-between;
+    @include max-width($f-hd) {
+      justify-content: center;
+    }
+    & > button {
+      min-width: rem(404);
+      min-height: rem(80);
+      font-size: rem(21);
+      @include max-width($f-hd) {
+        min-width: rem(303);
+        min-height: rem(70);
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@include max-width($tablet-media) {
+  .start {
+    padding: rem(40) 0;
+    &__title {
+      margin-bottom: rem(20);
+    }
+    &__flex {
+      margin-bottom: rem(30);
+    }
+    &__flex-item {
+      flex: 1;
+      padding: rem(30);
+    }
+    &__flex-title {
+      font-size: 1.5rem;
+    }
+    &__actions {
+      & > button {
+        font-size: rem(14);
+      }
+    }
+    &__descr {
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@include max-width($mob-media) {
+  .start {
+    &__flex {
+      flex-direction: column;
+    }
+  }
+}

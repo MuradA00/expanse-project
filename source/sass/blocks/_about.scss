@@ -1,0 +1,44 @@
+.about {
+  background-image: url('../../img/about/bg-about.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    margin-bottom: rem(134);
+  }
+  &__inner {
+    max-width: rem(872);
+  }
+  &__heading {
+    margin-bottom: rem(32);
+  }
+  &__descr {
+    display: flex;
+    flex-direction: column;
+    grid-gap: rem(25);
+    p {
+      color: #a5a5a5;
+      font-family: var(--ff-intro);
+      line-height: 150%;
+      font-size: rem(20);
+    }
+  }
+}
+
+@include max-width($tablet-media) {
+  .about {
+    &__title {
+      margin-bottom: rem(40);
+    }
+    &__descr {
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}

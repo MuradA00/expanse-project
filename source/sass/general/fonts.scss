@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Intro";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../fonts/intro_regular.ttf") format("truetype"), url("../../fonts/intro_regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Intro";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../../fonts/intro_bold.ttf") format("truetype"), url("../../fonts/intro_bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Algeria-Two";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/ALGERIATWO.TTF") format("truetype"),
+  url("../../fonts/ALGERIATWO.woff") format("woff");
+}
+
+

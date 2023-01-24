@@ -1,0 +1,80 @@
+.main-title {
+  font-family: var(--ff-main);
+  font-size: rem(65);
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  @include gradient-text;
+  position: relative;
+  &::before {
+    @include pseudo;
+    left: -61px;
+    width: rem(44);
+    height: rem(20);
+    background-image: url('../../img/title/title-label.png');
+    top: 50%;
+    transform: translateY(-50%);
+    flex: 0 0 auto;
+  }
+  &_both {
+    @include df;
+    grid-gap: rem(38);
+    justify-content: center;
+    text-align: center;
+    &::after {
+      flex: 0 0 auto;
+      content: '';
+      position: initial;
+      display: block;
+      width: rem(44);
+      height: rem(20);
+      background-image: url('../../img/title/title-label.png');
+    }
+    &::before {
+      position: initial;
+      transform: translateY(0);
+      display: block;
+    }
+  }
+  @include max-width(92.5em) {
+    display: flex;
+    align-items: center;
+    grid-gap: rem(15);
+    &::before {
+      position: initial;
+      transform: translateY(0);
+    }
+    &::after {
+      position: initial;
+      transform: translateY(0);
+    }
+  }
+  @include max-width($tablet-media) {
+    font-size: rem(42);
+    text-align: center;
+    justify-content: center;
+    &::before, &::after {
+      width: rem(34);
+      height: rem(15);
+      background-size: 100% 100%;
+    }
+  }
+  @include max-width($mob-media) {
+    font-size: rem(30);
+    &::before, &::after {
+      width: rem(25);
+      height: rem(10);
+    }
+  }
+}
+
+.main-subheading {
+  font-size: rem(35);
+  color: #efa043;
+  font-family: var(--ff-main);
+  text-transform: uppercase;
+  @include max-width($tablet-media) {
+    font-size: rem(24);
+    text-align: center;
+  }
+}

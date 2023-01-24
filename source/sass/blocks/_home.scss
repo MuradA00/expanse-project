@@ -1,0 +1,132 @@
+.home {
+  background-image: url('../../img/home/home-bg.jpg');
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  &__logo {
+    max-width: rem(656);
+    transform: translateX(-60px);
+    transition: all 300ms ease;
+    &:hover {
+      transform: scale(1.05) translateX(-60px);
+    }
+  }
+  &__offer {
+    h1 {
+      font-size: rem(65);
+      font-weight: 400;
+      @include gradient-text;
+      margin-bottom: rem(17);
+    }
+  }
+  &__subheading {
+    @include gradient-text;
+    font-size: rem(45);
+    margin-bottom: rem(26);
+  }
+  &__descr {
+    max-width: rem(645);
+    margin-bottom: rem(90);
+    p {
+      font-family: var(--ff-intro);
+      opacity: 0.35;
+      font-size: rem(24);
+      font-weight: 400;
+    }
+  }
+  &__actions {
+    @include df;
+    grid-gap: rem(36);
+    & > button {
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      min-width: rem(454);
+      min-height: rem(100);
+      @include dfc;
+      text-align: center;
+      font-size: rem(25);
+      font-weight: 400;
+    }
+  }
+}
+
+@include max-width($f-hd) {
+  .home {
+    background-size: cover;
+    &__logo {
+      max-width: rem(550);
+      transform: translateX(-50px);
+      &:hover {
+        transform: scale(1.05) translateX(-50px);
+      }
+    }
+    h1 {
+      font-size: rem(55);
+    }
+    &__subheading {
+      font-size: rem(36);
+      margin-bottom: rem(15);
+    }
+    &__descr {
+      p {
+        font-size: 1.125rem;
+      }
+      margin-bottom: rem(60);
+    }
+    &__actions {
+      grid-gap: rem(20);
+      & > button {
+        min-width: rem(340);
+        min-height: rem(70);
+        font-size: rem(18);
+      }
+    }
+  }
+}
+
+@include max-width($tablet-media) {
+  .home {
+    &__logo {
+      display: block;
+      max-width: rem(300);
+      margin-inline: auto;
+      transform: translateX(0px);
+      &:hover {
+        transform: translateX(0);
+      }
+    }
+    &__body {
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: rem(10);
+      font-size: rem(42);
+    }
+    &__offer {
+      text-align: center;
+    }
+    &__subheading {
+      font-size: 2rem;
+    }
+    &__descr {
+      margin-bottom: rem(30);
+      margin-inline: auto;
+      max-width: rem(370);
+      p {
+        font-size: rem(14);
+        opacity: 1;
+        opacity: .6;
+      }
+    }
+    &__actions {
+      flex-direction: column;
+      justify-content: center;
+      grid-gap: rem(5);
+      & > button {
+        min-width: rem(230) !important;
+        min-height: rem(50) !important;
+        font-size: rem(13);
+      }
+    }
+  }
+}

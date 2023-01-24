@@ -1,0 +1,117 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  &__container {
+    padding: 0 $cont-padding;
+    max-width: calc(rem(1775) + $cont-padding);
+    margin-inline: auto;
+    width: 100%;
+  }
+  &__top {
+    padding: rem(25) 0;
+    @include df;
+    justify-content: space-between;
+  }
+  &__bottom {
+    background-color: rgba(23, 22, 21, .32);
+    @include df;
+    justify-content: space-between;
+  }
+  &__row {
+    grid-gap: rem(71);
+    @include df;
+  }
+  &__lang {
+    font-family: var(--ff-intro);
+  }
+  &__lang-selected {
+    @include df;
+    grid-gap: rem(8);
+    img {
+      transition: all 300ms ease;
+    }
+    &:hover {
+      img {
+        transform: scaleY(-1);
+      }
+    }
+  }
+  &__options {
+    @include df;
+    grid-gap: rem(25);
+  }
+  &__profile {
+    min-width: rem(217);
+    min-height: rem(58);
+    @include df;
+    grid-gap: rem(12);
+    background-image: url('../../img/header/header-profile-overlay.png');
+    @include bg_position;
+  }
+  &__online {
+    min-width: rem(205);
+    min-height: rem(51);
+    background-image: url('../../img/header/btn-green-overlay.png');
+    background-size: 100% 100%;
+  }
+}
+
+.nav {
+  &__list {
+    @include df;
+    grid-gap: rem(55);
+  }
+  &__link {
+    transition: all 300ms ease;
+    span {
+      opacity: 0.7;
+    }
+    &_selected {
+      span {
+        opacity: 1;
+      }
+    }
+    &_flex {
+      @include df;
+      grid-gap: rem(13);
+      img {
+        flex: 0 0 auto;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.nav-bottom {
+  &__list {
+    @include df;
+    grid-gap: rem(53);
+  }
+  &__link {
+    @include df;
+    grid-gap: rem(9);
+    span {
+      opacity: .32;
+    }
+    img {
+      opacity: .32;
+    }
+  }
+}
+
+@include max-width($f-hd) {
+  .header {
+    &__top {
+      padding: rem(10) 0;
+    }
+  }
+}
+
+@include max-width(1366px) {
+  .header {
+    display: none;
+  }
+}
