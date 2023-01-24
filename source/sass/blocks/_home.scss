@@ -3,6 +3,7 @@
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
+  padding-top: var(--headerSpacing);
   &__logo {
     max-width: rem(656);
     transform: translateX(-60px);
@@ -115,6 +116,7 @@
 
 @include max-width($mob-media) {
   .home {
+    padding-top: 0;
     &__logo {
       display: block;
       max-width: rem(300);
@@ -145,7 +147,7 @@
     &__descr {
       margin-bottom: rem(20);
       margin-inline: auto;
-      max-width: rem(370);
+      max-width: rem(280);
       p {
         font-size: rem(14);
         opacity: 1;
