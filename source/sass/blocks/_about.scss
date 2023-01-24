@@ -4,6 +4,7 @@
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  padding: 3rem 0;
   &__body {
     display: flex;
     flex-direction: column;
@@ -33,11 +34,23 @@
 @include max-width($tablet-media) {
   .about {
     &__title {
+      font-size: rem(40);
       margin-bottom: rem(40);
     }
     &__descr {
       p {
         font-size: 1rem;
+      }
+    }
+  }
+}
+
+@include max-width($mob-media) {
+  .about {
+    &__descr {
+      grid-gap: rem(20);
+      p {
+        font-size: rem(14);
       }
     }
   }

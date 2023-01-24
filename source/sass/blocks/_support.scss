@@ -145,3 +145,19 @@
     }
   }
 }
+
+@include max-width(90em) {
+  .support {
+    &__row {
+      justify-content: space-evenly;
+    }
+  }
+}
+
+@include max-width($mob-media) {
+  .support {
+    &__row {
+      grid-gap: 1rem 3rem;
+    }
+  }
+}

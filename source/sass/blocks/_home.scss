@@ -1,7 +1,7 @@
 .home {
   background-image: url('../../img/home/home-bg.jpg');
   background-size: cover;
-  background-position: bottom;
+  background-position: top;
   background-repeat: no-repeat;
   &__logo {
     max-width: rem(656);
@@ -87,6 +87,35 @@
 @include max-width($tablet-media) {
   .home {
     &__logo {
+      transform: translateX(0);
+      &:hover {
+        transform: translateX(0);
+      }
+    }
+    &__actions {
+      flex-direction: column;
+      grid-gap: rem(5);
+    }
+    &__offer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    &__logo {
+      display: block;
+      margin-inline: auto;
+    }
+    &__descr {
+      margin-bottom: rem(20);
+      max-width: rem(400);
+      margin-inline: auto;
+    }
+  }
+}
+
+@include max-width($mob-media) {
+  .home {
+    &__logo {
       display: block;
       max-width: rem(300);
       margin-inline: auto;
@@ -105,11 +134,16 @@
     &__offer {
       text-align: center;
     }
+    h1 {
+      margin-bottom: 0;
+      font-size: rem(36);
+    }
     &__subheading {
-      font-size: 2rem;
+      font-size: 1.75rem;
+      margin-bottom: rem(10);
     }
     &__descr {
-      margin-bottom: rem(30);
+      margin-bottom: rem(20);
       margin-inline: auto;
       max-width: rem(370);
       p {
@@ -119,9 +153,7 @@
       }
     }
     &__actions {
-      flex-direction: column;
-      justify-content: center;
-      grid-gap: rem(5);
+      grid-gap: 0;
       & > button {
         min-width: rem(230) !important;
         min-height: rem(50) !important;

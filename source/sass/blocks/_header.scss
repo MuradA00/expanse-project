@@ -4,6 +4,25 @@
   left: 0;
   width: 100%;
   z-index: 1000;
+  &__logo {
+    max-width: rem(120);
+    transition: all 400ms ease;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  &__burger {
+    display: none;
+    grid-gap: rem(7);
+    margin-left: 1.5625rem;
+    span {
+      display: block;
+      width: rem(36);
+      height: rem(3);
+      border-radius: 2px;
+      background-color: #fff;
+    }
+  }
   &__container {
     padding: 0 $cont-padding;
     max-width: calc(rem(1775) + $cont-padding);
@@ -11,14 +30,33 @@
     width: 100%;
   }
   &__top {
-    padding: rem(25) 0;
+    padding: rem(8) 0;
     @include df;
     justify-content: space-between;
+    &::before {
+      background-color: rgba(24, 24, 24, .85);
+    }
   }
   &__bottom {
-    background-color: rgba(23, 22, 21, .32);
+    padding: rem(7) 0;
     @include df;
     justify-content: space-between;
+    &::before {
+      background-color: rgba(23, 22, 21, .55);
+    }
+  }
+  .pseudo-bg {
+    position: relative;
+    &::before {
+      @include pseudo;
+      width: 100vw;
+      height: 100%;
+      max-width: 100vw;
+      left: -50vw;
+      margin-right: -50vw;
+      margin-left: 50%;
+      z-index: -1;
+    }
   }
   &__row {
     grid-gap: rem(71);
@@ -26,6 +64,7 @@
   }
   &__lang {
     font-family: var(--ff-intro);
+    margin-right: rem(25);
   }
   &__lang-selected {
     @include df;
@@ -41,7 +80,7 @@
   }
   &__options {
     @include df;
-    grid-gap: rem(25);
+    justify-content: space-between;
   }
   &__profile {
     min-width: rem(217);
@@ -53,9 +92,17 @@
   }
   &__online {
     min-width: rem(205);
-    min-height: rem(51);
+    min-height: rem(48);
     background-image: url('../../img/header/btn-green-overlay.png');
-    background-size: 100% 100%;
+    background-size: 102% 101%;
+    background-position: center;
+    box-shadow: inset 0 0 21px rgba(255, 245, 210, 0.52);
+    border-radius: 25px;
+    background-color: #314815;
+    font-family: var(--ff-intro);
+    font-size: rem(16);
+    text-transform: uppercase;
+    cursor: pointer;
   }
 }
 
@@ -65,8 +112,11 @@
     grid-gap: rem(55);
   }
   &__link {
-    transition: all 300ms ease;
+    &:hover span {
+      opacity: 1;
+    }
     span {
+      transition: all 400ms ease;
       opacity: 0.7;
     }
     &_selected {
@@ -93,6 +143,15 @@
   &__link {
     @include df;
     grid-gap: rem(9);
+    font-family: var(--ff-intro);
+    text-transform: uppercase;
+    &:hover span{
+      opacity: 1;
+    }
+    span {
+      transition: all 400ms ease;
+      font-size: rem(14);
+    }
     span {
       opacity: .32;
     }
@@ -102,16 +161,62 @@
   }
 }
 
-@include max-width($f-hd) {
+@include max-width(90em) {
   .header {
-    &__top {
-      padding: rem(10) 0;
+    &__row {
+      grid-gap: 2rem;
+    }
+  }
+  .nav {
+    &__list {
+      grid-gap: 1.5rem;
+    }
+    &__link {
+      font-size: rem(14);
+    }
+  }
+  .nav-bottom {
+    &__list {
+      grid-gap: 1.5rem;
     }
   }
 }
 
-@include max-width(1366px) {
-  .header {
+@include max-width(68.75em) {
+  .nav, .nav-bottom {
     display: none;
+  }
+  .header {
+    &__burger {
+      display: grid;
+    }
+    &__top {
+      padding: rem(16) 0;
+    }
+    &__bottom {
+      display: none;
+    }
+    &__profile {
+      min-width: auto;
+      min-height: auto;
+      background-size: 0;
+      span {
+        display: none;
+      }
+    }
+  }
+}
+
+@include max-width($mob-media) {
+  .header {
+    &__logo {
+      max-width: rem(100);
+    }
+    &__lang {
+      margin-right: rem(16);
+    }
+    &__burger {
+      margin-left: rem(16);
+    }
   }
 }

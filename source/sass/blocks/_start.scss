@@ -2,6 +2,7 @@
   background-image: url('../../img/start/bg-start.jpg');
   background-size: cover;
   background-position: center;
+  padding: 2rem 0;
   &__flex {
     display: flex;
     grid-gap: 1.25rem;
@@ -95,6 +96,20 @@
   .start {
     &__flex {
       flex-direction: column;
+    }
+    &__flex-heading {
+      margin-bottom: 1rem;
+      width: rem(120);
+      height: rem(120);
+      font-size: rem(16);
+    }
+    &__flex-title {
+      font-size: rem(20);
+    }
+    &__descr {
+      p {
+        font-size: rem(14);
+      }
     }
   }
 }
