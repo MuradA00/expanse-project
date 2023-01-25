@@ -1,3 +1,4 @@
-const newsRow = new Swiper('.news__row', {
-
+const newsRow = new Swiper('.news__wrapper', {
+  slidesPerView: 'auto',
+  spaceBetween: 65
 })

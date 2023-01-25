@@ -3,9 +3,13 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  &__container {
+    margin-inline: auto;
+  }
   &__filter {
     @include df;
     grid-gap: rem(20);
+    margin-bottom: rem(80);
   }
   &__title {
     margin-bottom: rem(40);
@@ -27,6 +31,62 @@
       background-color: rgba(83, 74, 65, .5);      box-shadow: 0 0 16px #70856b, inset 0 0 24px 19px #fff5d2;
     }
   }
+  &__image {
+    border-radius: 25px;
+    overflow: hidden;
+    max-width: rem(377);
+    max-height: rem(207);
+    margin-bottom: rem(20);
+  }
+  &__row {
+    @include df;
+  }
+  &__wrapper {
+    // margin-left: rem(290) !important;
+    // max-width: rem(1650);
+    margin-left: auto !important;
+    margin-right: initial !important;
+    display: flex;
+    justify-content: end;
+  }
+  &__row-item {
+    flex: 0 1 rem(377);
+    &_update {
+      .news__row-name {
+        color: #b68dd4;
+      }
+    }
+  }
+  &__row-date {
+    color: #8a8a8a;
+    font-family: var(--ff-intro);
+    opacity: .2
+  }
+  &__row-heading {
+    @include df;
+    justify-content: space-between;
+    margin-bottom: rem(20);
+  }
+  &__row-name {
+    font-size: 1.125rem;
+  }
+  &__row-title {
+    font-family: var(--ff-intro);
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: rem(20);
+  }
+  &__row-inner {
+    p {
+      font-size: 1rem;
+      color: #8a8a8a;
+      font-family: var(--ff-intro);
+    }
+  }
+  &__row-name {
+
+  }
+
 }
 
 @include max-width($mob-media) {
