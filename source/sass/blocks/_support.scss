@@ -82,7 +82,7 @@
 
 @include max-width($tablet-media) {
   .support {
-    padding: rem(40);
+    padding: rem(40) 0;
     &__title {
       margin-bottom: rem(40);
     }

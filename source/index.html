@@ -5,8 +5,10 @@
 <body>
   @@include('_header.html',{})
   @@include('_menu.html',{})
+  @@include('_sidebar.html',{})
   <main>
     @@include('_home.html',{})
+    @@include('_news.html',{})
     @@include('_about.html',{})
     @@include('_start.html',{})
     @@include('_support.html',{})
@@ -14,8 +16,10 @@
 
 
   @@include('_footer.html',{})
-  <script src="js/swiper.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="js/common.js"></script>
+
 </body>
 
 </html>

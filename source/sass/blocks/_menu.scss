@@ -7,10 +7,12 @@
   left: 0;
   overflow: hidden;
   transition: 0.3s;
+  transition-delay: 100ms;
   z-index: 10000;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  --transition: cubic-bezier(0.35, 0, 0.07, 1);
   &__container {
     height: inherit;
   }
@@ -23,6 +25,7 @@
     transition: all 400ms ease;
     opacity: 0;
     transition-delay: 400ms;
+    transform: translateX(5rem);
     &::before, &::after {
       position: absolute;
       left: 15px;
@@ -40,23 +43,67 @@
     }
   }
   &__body {
+    padding: rem(40) 0;
     height: inherit;
     @include dfc;
+    overflow-y: scroll;
   }
   &__navigation {
     display: flex;
     flex-direction: column;
     align-items: center;
     grid-gap: 3rem;
+    position: relative;
+    transition-delay: 300ms;
+    transition: all 600ms var(--transition);
+    &::before, &::after {
+      transition: inherit;
+      transition-delay: 300ms;
+      opacity: 0;
+    }
+    &::before {
+        @include pseudo;
+        left: 20%;
+        top: 50%;
+        transform: translateY(-50%) translateX(-100%);
+        width: 20%;
+        height: rem(2);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, .8);
+    }
+    &::after {
+      @include pseudo;
+      right: 20%;
+      top: 50%;
+      transform: translateY(-50%) translateX(100%);
+      width: 20%;
+      height: rem(2);
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, .8);
+    }
   }
   &__logo {
     min-height: rem(25);
     overflow: hidden;
     img {
       transform: translateY(150%);
-      transition: 900ms cubic-bezier(0.35, 0, 0.07, 1);
-      transition-delay: 200ms;
+      transition: 900ms var(--transition);
+      transition-delay: 450ms;
     }
+  }
+}
+
+.nav-link {
+  font-size: 1.25rem;
+  overflow: hidden;
+  display: inline-flex;
+  color: rgba(255, 255, 255, .7);
+  @include df;
+  grid-gap: rem(10);
+  span, img {
+    transform: translateY(150%);
+    transition: all 1s var(--transition);
+    transition-delay: 750ms;
   }
 }
 
@@ -70,54 +117,19 @@
   &__item {
     display: inline-flex;
   }
-  &__link {
-    overflow: hidden;
-    font-size: 1.15rem;
-    align-items: center;
-    grid-gap: rem(16);
-    font-family: var(--ff-intro);
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, .7);
-    span {
-      transform: translateY(150%);
-      transition: .9s 600ms cubic-bezier(0.35, 0, 0.07, 1);
-    }
-    img {
-      transform: translateY(150%);
-      transition: .9s 600ms cubic-bezier(0.35, 0, 0.07, 1);
-      display: block;
-      flex: 0 0 auto;
-    }
-  }
 }
 
 .m-links {
+  &__link {
+    font-family: var(--ff-intro);
+    text-transform: uppercase;
+  }
   &__list {
     display: flex;
     grid-gap: 1rem;
   }
   &__item {
     display: inline-flex;
-  }
-  &__link {
-    overflow: hidden;
-    font-size: 1.15rem;
-    align-items: center;
-    grid-gap: rem(16);
-    font-family: var(--ff-intro);
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, .7);
-    span {
-      transform: translateY(150%);
-      transition: .9s 650ms cubic-bezier(0.35, 0, 0.07, 1);
-    }
-    img {
-
-      transform: translateY(150%);
-      transition: .9s 650ms cubic-bezier(0.35, 0, 0.07, 1);
-      display: block;
-      flex: 0 0 auto;
-    }
   }
 }
 
@@ -126,8 +138,15 @@
   visibility: visible;
   pointer-events: auto;
   .menu {
+    &__navigation {
+      &::before, &::after {
+        transform: translateY(50%) translateX(0);
+        opacity: 1;
+      }
+    }
     &__close {
       opacity: 1;
+      transform: translateX(0);
     }
     &__logo {
       img {
@@ -162,5 +181,35 @@
   }
   .m-links__link, .m-nav__link {
     text-align: center;
+  }
+  .menu {
+    &__navigation {
+      grid-gap: rem(35);
+      &::before, &::after {
+        width: 50%;
+      }
+      &::before {
+        left: 95%;
+      }
+      &::after {
+        right: 95%;
+      }
+    }
+  }
+}
+
+@include max-width(25em) {
+  .menu {
+    &__navigation {
+      &::before, &::after {
+        width: 45%;
+      }
+      &::before {
+        left: 90%;
+      }
+      &::after {
+        right: 90%;
+      }
+    }
   }
 }

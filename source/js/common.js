@@ -4,11 +4,28 @@ const header = document.querySelector('.header'),
       menu = document.querySelector('.menu'),
       burger = document.querySelector('.header__burger'),
       closeIcon = document.querySelector('.menu__close'),
-      body = document.body;
+      body = document.body,
+      sections = document.querySelectorAll('section'),
+      sectionLinks = document.querySelectorAll('.side__list-link');
+
+AOS.init({
+  once: true
+})
 
 const setPosition = () => {
   root.style.setProperty('--headerSpacing', header.clientHeight + 'px')
 };
+
+// let headings = document.querySelectorAll('.section-heading');
+// let headingsSetted = [];
+
+// function setHeading() {
+//   headings.forEach(heading => {
+//     headingsSetted.push.apply[heading];
+//   })
+// }
+
+// setHeading();
 
 
 function showMenu() {
@@ -39,5 +56,36 @@ if (burger) {
   burger.addEventListener('click', showMenu);
 }
 
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      sectionLinks.forEach((link) => {
+        const linkOrder = link.getAttribute('href').replace('#', '');
+        if (linkOrder == entry.target.id) {
+          link.classList.add('--active-number')
+        } else {
+          link.classList.remove('--active-number')
+        }
+      })
+    }
+  })
+}, {
+  threshold: 0.6
+})
+
+sections.forEach(section => {
+  observer.observe(section)
+})
+
+menu.addEventListener('click', (e) => {
+  if (e.target.classList.contains('.side__list-link')) {
+    e.preventDefault();
+    const sectionId = e.target.getAttribute('href').replace('#', '')
+    window.scrollTo({
+      top: document.getElementById(sectionId).offsetTop,
+      smooth: 'smooth'
+    })
+  }
+})
 
 setPosition();
