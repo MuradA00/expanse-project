@@ -156,6 +156,7 @@
 
 @include max-width($mob-media) {
   .support {
+    padding: rem(20) 0;
     &__row {
       grid-gap: 1rem 3rem;
     }
