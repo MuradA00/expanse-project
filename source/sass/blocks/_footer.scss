@@ -93,6 +93,8 @@
     }
     &__copy {
       font-size: rem(12);
+      max-width: rem(250);
+      margin-inline: auto;
       text-align: center;
     }
   }

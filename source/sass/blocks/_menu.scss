@@ -181,12 +181,14 @@
   }
   .m-links__link, .m-nav__link {
     text-align: center;
+    font-size: rem(18);
   }
   .menu {
     &__navigation {
       grid-gap: rem(35);
       &::before, &::after {
         width: 50%;
+        top: 49%;
       }
       &::before {
         left: 95%;
