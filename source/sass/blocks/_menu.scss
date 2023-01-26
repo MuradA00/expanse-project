@@ -53,11 +53,17 @@
     flex-direction: column;
     align-items: center;
     grid-gap: 3rem;
+  }
+  &__logo {
+    min-height: rem(25);
+    overflow: hidden;
+    display: block;
+    text-align: center;
+    width: 100%;
     position: relative;
-    transition-delay: 300ms;
-    transition: all 600ms var(--transition);
     &::before, &::after {
-      transition: inherit;
+      transition-delay: 300ms;
+      transition: all 600ms var(--transition);
       transition-delay: 300ms;
       opacity: 0;
     }
@@ -81,10 +87,6 @@
       border-radius: 5px;
       background-color: rgba(255, 255, 255, .8);
     }
-  }
-  &__logo {
-    min-height: rem(25);
-    overflow: hidden;
     img {
       transform: translateY(150%);
       transition: 900ms var(--transition);
@@ -138,12 +140,6 @@
   visibility: visible;
   pointer-events: auto;
   .menu {
-    &__navigation {
-      &::before, &::after {
-        transform: translateY(-50%) translateX(0);
-        opacity: 1;
-      }
-    }
     &__close {
       opacity: 1;
       transform: translateX(0);
@@ -151,6 +147,10 @@
     &__logo {
       img {
         transform: translateY(0) !important;
+      }
+      &::before, &::after {
+        transform: translateY(-50%) translateX(0);
+        opacity: 1;
       }
     }
   }
@@ -184,33 +184,38 @@
     font-size: rem(18);
   }
   .menu {
-    &__navigation {
-      grid-gap: rem(35);
+    &__logo {
       &::before, &::after {
-        width: 50%;
         top: 50%;
+        width: 30%;
       }
       &::before {
-        left: 95%;
+        right: 0%;
+        left: initial;
       }
       &::after {
-        right: 95%;
+        left: 0%;
+        right: initial;
       }
+    }
+    &__navigation {
+      min-width: rem(350);
+      grid-gap: rem(35);
     }
   }
 }
 
-@include max-width(25em) {
+@include max-width(23.4375em) {
   .menu {
-    &__navigation {
+    &__logo {
       &::before, &::after {
-        width: 45%;
+        width: 22%;
       }
       &::before {
-        left: 90%;
+        left: 8%;
       }
       &::after {
-        right: 90%;
+        right: 8%;
       }
     }
   }

@@ -17,6 +17,9 @@
     align-items: center;
     text-align: center;
   }
+  &__download {
+    transform: translateY(5px);
+  }
   &__title {
     margin-bottom: rem(60);
   }

@@ -7,3 +7,8 @@ const newsRow = new Swiper('.news__wrapper', {
     }
   }
 })
+
+const updateRow = new Swiper('.update__wrapper', {
+  slidesPerView: 'auto',
+  effect: 'fade'
+})
