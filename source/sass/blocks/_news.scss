@@ -14,6 +14,19 @@
     grid-gap: rem(20);
     margin-bottom: rem(80);
   }
+  &__wrapper {
+    position: relative;
+  }
+  &__pagination {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__arrow {
+    left: -10%;
+    z-index: 1000;
+    position: absolute;
+  }
   &__title {
     margin-bottom: rem(40);
   }
