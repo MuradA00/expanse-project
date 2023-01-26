@@ -1,0 +1,113 @@
+.player {
+  position: fixed;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  --video-height: rem(150);
+
+  &__body {
+    @include dfc;
+    flex-direction: column;
+  }
+  &__button {
+    cursor: pointer;
+    transition: all 300ms ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &__videos {
+    padding: rem(13);
+    position: fixed;
+    background-color: rgba(31, 31, 30, .6);
+    right: rem(120);
+    z-index: 10000;
+    transition: all 450ms ease;
+    top: calc(50% + (var(--headerSpacing) / 2));
+    transform: translateY(-50%) translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+  }
+  &__videos-container {
+    display: flex;
+    flex-direction: column;
+    grid-gap: rem(15);
+    max-height: rem(790);
+    overflow-y: scroll;
+  }
+  &__videos-column-item {
+    max-height: var(--video-height);
+    max-width: rem(278);
+    &:not(:last-child) {
+      margin-bottom: rem(12);
+    }
+  }
+}
+
+.player__close {
+    &::before, &::after {
+      position: absolute;
+      top: 0;
+      content: '';
+      height: 33px;
+      width: 3px;
+      background-color: rgba(255, 255, 255, .8);;
+      border-radius: 5px;
+    }
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      transform: rotate(-45deg);
+    }
+}
+
+.open-videos {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translate(0, -50%);
+}
+
+@include max-width(85em) {
+  .player {
+    &__videos {
+
+      right: rem(100);
+    }
+  }
+}
+
+@include max-width($mob-media) {
+  .player {
+    &__line {
+      overflow: hidden;
+      img {
+        height: rem(70);
+      }
+    }
+    &__videos-container {
+      max-height: calc(rem(150) + rem(10));
+    }
+    &__button {
+      max-width: rem(45);
+    }
+    &__videos {
+      right: rem(60);
+    }
+  }
+}
+
+@include max-width(31.25em) {
+  .player {
+    right: rem(10);
+    &__videos {
+      right: initial;
+      left: 50%;
+      top: 50%;
+    }
+  }
+  .open-videos {
+    transform: translate(-50%, -50%);
+  }
+}

@@ -12,6 +12,25 @@ body {
   min-height: -webkit-fill-available;
   display: flex;
   flex-direction: column;
+  &::before {
+    transition: all 400ms ease;
+    @include pseudo;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    top: 0;
+    left: 0;
+    z-index: 500;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.body-active {
+  &::before {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 html {

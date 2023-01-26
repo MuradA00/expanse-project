@@ -140,7 +140,7 @@
   .menu {
     &__navigation {
       &::before, &::after {
-        transform: translateY(50%) translateX(0);
+        transform: translateY(-50%) translateX(0);
         opacity: 1;
       }
     }
@@ -188,7 +188,7 @@
       grid-gap: rem(35);
       &::before, &::after {
         width: 50%;
-        top: 49%;
+        top: 50%;
       }
       &::before {
         left: 95%;
