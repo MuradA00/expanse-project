@@ -3,7 +3,7 @@
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
-  padding-top: var(--headerSpacing);
+  padding-top: calc(var(--headerSpacing) / 2);
   &__logo {
     max-width: rem(656);
     transform: translateX(-60px);
@@ -11,6 +11,16 @@
     &:hover {
       transform: scale(1.05) translateX(-60px);
     }
+  }
+  &__container {
+    position: relative;
+  }
+  &__scroll-down {
+    position: absolute;
+    z-index: 100;
+    bottom: -20%;
+    left: rem(30);
+    transition: all 400ms ease;
   }
   &__offer {
     h1 {
@@ -86,6 +96,20 @@
   }
 }
 
+@include max-width(90em) {
+  .home {
+    padding-top: 0;
+    &__scroll-down {
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -60px;
+      img {
+        max-width: rem(50);
+      }
+    }
+  }
+}
+
 @include max-width($tablet-media) {
   .home {
     &__logo {
@@ -126,6 +150,9 @@
       &:hover {
         transform: translateX(0);
       }
+    }
+    &__scroll-down {
+      display: none;
     }
     &__body {
       text-align: center;

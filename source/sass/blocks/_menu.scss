@@ -212,10 +212,11 @@
         width: 22%;
       }
       &::before {
-        left: 8%;
+        right: 8%;
       }
       &::after {
-        right: 8%;
+        left: 8%;
+
       }
     }
   }

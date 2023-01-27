@@ -16,18 +16,6 @@ const setPosition = () => {
   root.style.setProperty('--headerSpacing', header.clientHeight + 'px')
 };
 
-// let headings = document.querySelectorAll('.section-heading');
-// let headingsSetted = [];
-
-// function setHeading() {
-//   headings.forEach(heading => {
-//     headingsSetted.push.apply[heading];
-//   })
-// }
-
-// setHeading();
-
-
 function showMenu() {
   closeIcon.classList.remove('closed')
   burger.classList.toggle('active-burger');

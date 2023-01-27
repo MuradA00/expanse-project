@@ -66,6 +66,9 @@
       height: rem(10);
     }
   }
+  @include max-width(23.75em) {
+    font-size: rem(24) !important;
+  }
 }
 
 .main-subheading {
