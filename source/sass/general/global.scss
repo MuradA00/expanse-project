@@ -12,6 +12,7 @@ body {
   min-height: -webkit-fill-available;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
   &::before {
     transition: all 400ms ease;
     @include pseudo;

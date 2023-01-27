@@ -67,6 +67,30 @@
   &__short-logo {
     max-width: rem(141);
   }
+  &_long {
+    background-color: rgba(17, 17, 17, .8) !important;
+  }
+  &__long-body {
+    padding: rem(35);
+    grid-gap: rem(75);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &::before {
+      @include pseudo;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      background-color: #131313;
+      opacity: .5;
+      height: 1px;
+    }
+  }
+}
+
+.footer-socials {
+  @include df;
+  grid-gap: rem(25);
 }
 
 .short-socials {
