@@ -24,6 +24,43 @@
       background-color: rgba(255, 255, 255, .8);
     }
   }
+  &__lang {
+    position: relative;
+    cursor: pointer;
+    &:hover .header__hidden-list {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+      pointer-events: auto;
+    }
+    img {
+      transition: all 300ms ease;
+    }
+    &:hover {
+      img {
+        transform: scaleY(-1);
+      }
+    }
+  }
+  &__hidden-list {
+    position: absolute;
+    z-index: 100;
+    background-color: rgba(17,17,16,.6);
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 300ms ease;
+  }
+  &__hidden-item {
+    padding: rem(10);
+    transition: 400ms ease;
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(255, 255, 255, .2);
+    }
+  }
   &__container {
     padding: 0 $cont-padding;
     max-width: calc(rem(1775) + $cont-padding);
@@ -70,14 +107,6 @@
   &__lang-selected {
     @include df;
     grid-gap: rem(8);
-    img {
-      transition: all 300ms ease;
-    }
-    &:hover {
-      img {
-        transform: scaleY(-1);
-      }
-    }
   }
   &__options {
     @include df;
