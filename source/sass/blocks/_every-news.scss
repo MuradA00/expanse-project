@@ -1,0 +1,27 @@
+.every-news {
+  padding-top: var(--headerSpacing);
+  margin-bottom: rem(170);
+  &__title {
+    margin-bottom: rem(40);
+  }
+  &__filter {
+    margin-bottom: rem(50);
+  }
+  &__row {
+    @include df;
+    width: fit-content;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-gap: rem(40) rem(105);
+  }
+  &__logo {
+    max-width: rem(533);
+    transform: translate(-40px);
+  }
+}
+
+@include max-width($mob-media) {
+  .news-body {
+    background-position: left !important;
+  }
+}

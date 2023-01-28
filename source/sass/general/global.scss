@@ -13,6 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  height: 100%;
   &::before {
     transition: all 400ms ease;
     @include pseudo;
@@ -147,6 +148,11 @@ input[type="number"] {
   border: 0;
   clip: rect(0 0 0 0);
   clip-path: inset(100%);
+}
+
+main {
+  flex: 1 1 auto;
+  min-height: 100%;
 }
 
 * {

@@ -8,13 +8,12 @@ const header = document.querySelector('.header'),
       sections = document.querySelectorAll('section'),
       sectionLinks = document.querySelectorAll('.side__list-link');
 
-AOS.init({
-  once: true
-})
 
 const setPosition = () => {
   root.style.setProperty('--headerSpacing', header.clientHeight + 'px')
 };
+
+setPosition();
 
 function showMenu() {
   closeIcon.classList.remove('closed')
@@ -76,5 +75,7 @@ menu.addEventListener('click', (e) => {
   }
 })
 
-setPosition();
+AOS.init({
+  once: true
+})
 
