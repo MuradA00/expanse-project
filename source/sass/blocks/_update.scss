@@ -72,6 +72,9 @@
     opacity: .5 !important;
     background: transparent !important;
   }
+  // &__slider-item .swiper-slide-active .update__video{
+  //   display: block;
+  // }
   &__descr {
     max-width: rem(530);
     p {
@@ -122,6 +125,7 @@
       top: 0;
       left: 0;
       position: absolute;
+      // display: none;
     }
   }
   &__inner {

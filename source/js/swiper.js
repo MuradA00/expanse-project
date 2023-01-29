@@ -27,6 +27,8 @@ const newsRow = new Swiper('.news__wrapper', {
 const updateRow = new Swiper(updateWrapper, {
   slidesPerView: 'auto',
   effect: 'fade',
+  autoplay: true,
+  fadeEffect: { crossFade: true },
   navigation: {
     nextEl: '.update__arrow_next',
     prevEl: '.update__arrow_prev'
@@ -46,10 +48,14 @@ const updateRow = new Swiper(updateWrapper, {
   }
 })
 
+let videoBlocks = document.querySelectorAll('.update__video');
+
+videoBlocks.forEach(videoBlock => {
+  videoBlock.pause();
+})
 
 updateRow.on('slideChange', function() {
-  let videoBlock = document.querySelectorAll('.update__bg-video video');
-  videoBlock.forEach(video => {
-    video.currentTime = 0;
+  videoBlocks.forEach(video => {
+    video.play();
   })
 })
