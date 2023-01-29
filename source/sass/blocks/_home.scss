@@ -12,6 +12,9 @@
       transform: scale(1.05) translateX(-60px);
     }
   }
+  &__body {
+    padding-top: rem(30);
+  }
   &__container {
     position: relative;
   }
@@ -36,13 +39,16 @@
   }
   &__descr {
     max-width: rem(645);
-    margin-bottom: rem(90);
+    margin-bottom: rem(60);
     p {
       font-family: var(--ff-intro);
       opacity: 0.35;
       font-size: rem(24);
       font-weight: 400;
     }
+  }
+  &__download {
+    background-image: url('../../img/header/yellow-btn-overlay.png')
   }
   &__actions {
     @include df;

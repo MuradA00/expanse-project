@@ -1,5 +1,6 @@
 const slides = document.querySelectorAll('.update__slider-item'),
-      updateWrapper = document.querySelector('.update__wrapper');
+      updateWrapper = document.querySelector('.update__wrapper'),
+      videoSliders = document.querySelectorAll('.update__slider-item');
 
 const render = function(parent, index) {
   let renderParent = parent.querySelectorAll('.update__slider-item')[index].getAttribute('data-content');
@@ -45,3 +46,10 @@ const updateRow = new Swiper(updateWrapper, {
   }
 })
 
+
+updateRow.on('slideChange', function() {
+  let videoBlock = document.querySelectorAll('.update__bg-video video');
+  videoBlock.forEach(video => {
+    video.currentTime = 0;
+  })
+})
