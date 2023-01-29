@@ -122,6 +122,9 @@
     grid-gap: rem(12);
     background-image: url('../../img/header/header-profile-overlay.png');
     @include bg_position;
+    span, img {
+      transform: translateY(-2px);
+    }
   }
   &__online {
     min-width: rem(205);
@@ -135,7 +138,9 @@
     font-family: var(--ff-intro);
     font-size: rem(16);
     text-transform: uppercase;
-    cursor: pointer;
+    &:hover {
+      transform: scale(1)
+    }
   }
 }
 
