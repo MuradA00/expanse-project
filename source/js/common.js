@@ -6,7 +6,8 @@ const header = document.querySelector('.header'),
       closeIcon = document.querySelector('.menu__close'),
       body = document.body,
       sections = document.querySelectorAll('section'),
-      sectionLinks = document.querySelectorAll('.side__list-link');
+      sectionLinks = document.querySelectorAll('.side__list-link'),
+      navLinks = document.querySelectorAll('.nav-link');
 
 
 const setPosition = () => {
@@ -14,6 +15,15 @@ const setPosition = () => {
 };
 
 setPosition();
+
+function closeMenuByClick() {
+  if (navLinks.length > 0) {
+    navLinks.forEach(link => {
+      link.addEventListener('click', closeMenu);
+    })
+  }
+}
+closeMenuByClick();
 
 function showMenu() {
   closeIcon.classList.remove('closed')

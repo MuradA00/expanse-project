@@ -94,7 +94,7 @@
 }
 
 .short-socials {
-  display: flex;
+  @include df;
   grid-gap: rem(30);
 }
 
@@ -139,8 +139,14 @@
     &__body {
       grid-gap: rem(25);
     }
+    &__short-row {
+      flex-direction: column;
+    }
     &__content {
       grid-gap: rem(40);
+    }
+    &__short-body {
+      padding: 3rem 0;
     }
     &__copy {
       font-size: rem(12);
@@ -149,11 +155,29 @@
       text-align: center;
     }
   }
+  .short-socials {
+    &__link {
+      max-width: rem(40);
+    }
+  }
   .footer-nav {
     &__list {
       grid-gap: rem(20);
       justify-content: center;
       flex-wrap: wrap;
+    }
+  }
+}
+
+@include max-width(31.25em) {
+  .footer {
+    &__long-body {
+      &::before {
+        top: 40%;
+        width: 80%;
+        transform: translateX(-50%);
+        left: 50%;
+      }
     }
   }
 }

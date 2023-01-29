@@ -98,11 +98,9 @@
 
 @include max-width(90em) {
   .home {
-    padding-top: 0;
+    padding-top: var(--headerSpacing);
     &__scroll-down {
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: -60px;
+      display: none;
       img {
         max-width: rem(50);
       }

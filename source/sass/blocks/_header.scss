@@ -112,6 +112,9 @@
     @include df;
     justify-content: space-between;
   }
+  &__hidden-item {
+    text-align: center;
+  }
   &__profile {
     min-width: rem(217);
     min-height: rem(58);

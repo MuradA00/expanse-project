@@ -5,6 +5,15 @@
   background-repeat: no-repeat;
 }
 
+.footer_short {
+  .footer__long-body {
+    display: none;
+  }
+  .footer__short-body {
+    display: flex !important;
+  }
+}
+
 .promo {
   margin-bottom: rem(260);
   &__wrapper {
@@ -175,6 +184,10 @@
     background-position: right;
   }
   .promo {
+    margin-bottom: rem(50);
+    &__wrapper {
+      padding: 5rem 0;
+    }
     &__timer-item {
       min-width: rem(110);
       min-height: rem(110);
@@ -198,9 +211,10 @@
       }
     }
     &__subheading {
+      max-width: rem(400);
       p {
         opacity: 1;
-        font-size: rem(14);
+        font-size: rem(16);
       }
     }
     &__register {

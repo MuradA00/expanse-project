@@ -31,14 +31,6 @@
       vertical-align: bottom;
     }
   }
-  &__poster-picture {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    width: max-content;
-    height: max-content;
-  }
   &__heading {
     @include df;
     grid-gap: rem(30);
@@ -75,6 +67,74 @@
       font-family: var(--ff-intro);
       text-align: left;
       line-height: 150%;
+    }
+  }
+}
+
+@include max-width(65em) {
+  .news-page {
+    &__heading {
+      span {
+        font-size: rem(32);
+      }
+      img {
+        max-width: rem(100);
+      }
+    }
+    &__subheading {
+      span {
+        font-size: rem(14);
+      }
+    }
+    &__date {
+      font-size: rem(12);
+    }
+    &__descr {
+      p {
+        font-size: rem(14);
+      }
+    }
+  }
+}
+
+@include max-width($tablet-media) {
+  .news-page {
+    &__logo {
+      transform: translate(0);
+      display: block;
+      margin-inline: auto;
+      max-width: rem(400);
+    }
+    &__heading {
+      span {
+        font-size: rem(28);
+      }
+      img {
+        max-width: rem(100);
+      }
+    }
+  }
+}
+
+@include max-width($mob-media) {
+  .news-page {
+    margin-bottom: rem(50);
+    &__logo {
+      max-width: rem(300);
+    }
+    &__heading {
+      grid-gap: rem(10);
+      @include dfc;
+      span {
+
+        font-size: rem(20);
+      }
+      img {
+        display: none;
+      }
+    }
+    &__subheading-block {
+      justify-content: center;
     }
   }
 }
