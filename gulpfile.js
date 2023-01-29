@@ -128,7 +128,7 @@ gulp.task("html", () => {
 gulp.task("copy", () => {
   return gulp.src([
       "source/fonts/**/*.{woff,woff2, ttf}",
-      "source/img/**/*.{png,jpg,jpeg,svg,gif,mp4}",
+      "source/img/**/*.{png,jpg,jpeg,svg,gif,mp4,webm}",
       "source/*.ico"
     ], {
       base: "source"

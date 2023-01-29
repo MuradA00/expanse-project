@@ -1,7 +1,99 @@
 <!DOCTYPE html>
 <html lang="ru">
 @@include("_head.html",{})
-@@include("_header.html",{})
+<header class="header">
+  <div class="header__container">
+    <div class="header__body">
+      <div class="header__top pseudo-bg">
+        <div class="header__row">
+          <a href="/" class="header__logo">
+            <img src="img/header/header-logo.png" alt="">
+          </a>
+          <div class="header__navigation">
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__item"><a href="/" class="nav__link" ><span>главная</span></a></li>
+                <li class="nav__item"><a href="about-server.html" class="nav__link nav__link_selected" ><span>О сервере</span></a></li>
+                <li class="nav__item"><a href="/#section-3" class="nav__link" ><span>Новости</span></a></li>
+                <li class="nav__item"><a href="#" class="nav__link nav__link_flex" ><span>Сообщество</span>
+                  <img src="img/header/discord-icon.png" alt="discord-icon">
+                </a></li>
+                <li class="nav__item"><a href="/#section-6" class="nav__link" ><span>ПоддержКА</span></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="header__options">
+          <div class="header__lang">
+            <div class="header__lang-selected">
+              <span>RU</span>
+              <img src="img/header/arrow-down.png" alt="arrow-down">
+            </div>
+            <div class="header__hidden-list">
+              <a href="#" class="header__hidden-item">
+                ENG
+              </a>
+              <a href="#" class="header__hidden-item">
+                FR
+              </a>
+            </div>
+          </div>
+          <a href="#" class="header__profile btn btn_med">
+            <img src="img/header/user-icon.png" alt="user-icon">
+            <span>Кабинет</span>
+          </a>
+          <div class="header__burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <div class="header__bottom pseudo-bg">
+        <div class="header__bottom-navigation">
+          <nav class="nav-bottom">
+            <ul class="nav-bottom__list">
+              <li class="nav-bottom__item">
+                <a href="#" class="nav-bottom__link">
+                <img src="img/header/navigtation-link-icon.png" alt="nav-link-icon">
+                <span>регистрация</span>
+                </a>
+              </li>
+              <li class="nav-bottom__item">
+                <a href="/#section-5" class="nav-bottom__link">
+                <img src="img/header/navigtation-link-icon.png" alt="nav-link-icon">
+                <span>как начать?</span>
+                </a>
+              </li>
+              <li class="nav-bottom__item">
+                <a href="#" class="nav-bottom__link">
+                <img src="img/header/navigtation-link-icon.png" alt="nav-link-icon">
+                <span>Пожертвования</span>
+                </a>
+              </li>
+              <li class="nav-bottom__item">
+                <a href="#" class="nav-bottom__link">
+                <img src="img/header/navigtation-link-icon.png" alt="nav-link-icon">
+                <span>СтримЫ</span>
+                </a>
+              </li>
+              <li class="nav-bottom__item">
+                <a href="database.html" class="nav-bottom__link">
+                <img src="img/header/navigtation-link-icon.png" alt="nav-link-icon">
+                <span>База знаний</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__state header__state_is-offline btn">
+          Offline
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
 @@include("_menu.html",{})
 <body class="news-body footer_long">
   <main>

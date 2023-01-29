@@ -7,8 +7,15 @@ const header = document.querySelector('.header'),
       body = document.body,
       sections = document.querySelectorAll('section'),
       sectionLinks = document.querySelectorAll('.side__list-link'),
-      navLinks = document.querySelectorAll('.nav-link');
+      navLinks = document.querySelectorAll('.nav-link'),
+      videoBlock = document.querySelectorAll('.update__bg-video video'),
+      videoSliders = document.querySelectorAll('.update__slider-item');
 
+videoBlock.forEach(video => {
+  video.pause();
+})
+
+playVideoOnSlide();
 
 const setPosition = () => {
   root.style.setProperty('--headerSpacing', header.clientHeight + 'px')
