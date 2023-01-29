@@ -27,7 +27,9 @@ const newsRow = new Swiper('.news__wrapper', {
 const updateRow = new Swiper(updateWrapper, {
   slidesPerView: 'auto',
   effect: 'fade',
-  autoplay: true,
+  autoplay: {
+    delay: 3000
+  },
   fadeEffect: { crossFade: true },
   navigation: {
     nextEl: '.update__arrow_next',

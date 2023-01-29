@@ -10,6 +10,7 @@ const header = document.querySelector('.header'),
       navLinks = document.querySelectorAll('.nav-link');
 
 
+
 const setPosition = () => {
   root.style.setProperty('--headerSpacing', header.clientHeight + 'px')
 };
@@ -88,4 +89,13 @@ menu.addEventListener('click', (e) => {
 AOS.init({
   once: true
 })
+
+var mixer = mixitup('.news__row', {
+  selectors: {
+    target: '.news__row-item'
+},
+    animation: {
+        duration: 300
+    }
+});
 

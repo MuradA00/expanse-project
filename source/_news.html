@@ -7,7 +7,7 @@
         </h3>
         <div class="news__filter">
           <div class="news__filter-item">
-            <button class="news__filter-btn news__filter-btn_active">
+            <button class="news__filter-btn news__filter-btn_active" data-filter=".all">
               ВСЕ
             </button>
           </div>
@@ -17,12 +17,12 @@
             </button>
           </div>
           <div class="news__filter-item">
-            <button class="news__filter-btn">
+            <button class="news__filter-btn" data-filter=".stock">
               акции
             </button>
           </div>
           <div class="news__filter-item">
-            <button class="news__filter-btn">
+            <button class="news__filter-btn" data-filter=".events">
               СобытиЯ
             </button>
           </div>
@@ -30,7 +30,7 @@
       </div>
       <div class="news__wrapper swiper">
         <ul class="news__row swiper-wrapper">
-          <li class="update news__row-item news__row-item_update swiper-slide">
+          <li class="all update news__row-item news__row-item_update swiper-slide update">
             <div class="news__image">
               <img src="img/news/update-overlay.png" alt="news-image">
             </div>
@@ -51,7 +51,7 @@
               </div>
             </div>
           </li>
-          <li class="news__row-item news__row-item_event swiper-slide">
+          <li class="all news__row-item news__row-item_event swiper-slide events" >
             <div class="news__image">
               <img src="img/news/news-event-image.jpg" alt="news-event-image">
             </div>
@@ -72,7 +72,7 @@
               </div>
             </div>
           </li>
-          <li class="news__row-item news__row-item_news swiper-slide">
+          <li class="all news__row-item news__row-item_news swiper-slide">
             <div class="news__image">
               <img src="img/news/news-overlay.png" alt="news-image">
             </div>
@@ -93,7 +93,7 @@
               </div>
             </div>
           </li>
-          <li class="news__row-item news__row-item_news swiper-slide">
+          <li class="all news__row-item news__row-item_news swiper-slide stock">
             <div class="news__image">
               <img src="img/news/update-overlay.png" alt="news-image">
             </div>
@@ -101,7 +101,7 @@
               <div class="news__row-heading">
                 <span class="news__row-name">
                   <img src="img/news/news-heading-label.svg" alt="news-label">
-                новости</span>
+                Скидки</span>
                 <span class="news__row-date">12.12.2022</span>
               </div>
               <div class="news__row-title">
@@ -114,7 +114,7 @@
               </div>
             </div>
           </li>
-          <li class="news__row-item news__row-item_news swiper-slide">
+          <li class="all news__row-item news__row-item_news swiper-slide">
             <div class="news__image">
               <img src="img/news/update-overlay.png" alt="news-image">
             </div>
