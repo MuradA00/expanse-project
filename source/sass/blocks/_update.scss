@@ -32,12 +32,13 @@
   }
   &__bullet-row {
     display: flex;
-    grid-gap: rem(80);
-    justify-content: space-between;
   }
   &__bullet-wrapper {
-    max-width: rem(1175);
-    overflow: hidden;
+    // max-width: rem(1175);
+    // overflow: hidden;
+    .swiper-slide-thumb-active {
+      opacity: 1;
+    }
   }
   &__bullet-row-item {
     flex: 0 0 auto;
@@ -45,6 +46,8 @@
     flex-direction: column;
     grid-gap: rem(14);
     max-width: rem(125);
+    opacity: .5;
+    transition: all 300ms ease;
   }
   &__bullet-row-info {
     text-align: center;
@@ -52,15 +55,16 @@
   &__arrow {
     margin-bottom: rem(48);
     cursor: pointer;
+    filter: brightness(2);
     transition: all 300ms ease;
     &_prev {
       &:hover {
-        transform: translateX(-10px);
+        transform: translateX(-5px);
       }
     }
     &_next {
       &:hover {
-        transform: translateX(10px)
+        transform: translateX(5px)
       }
     }
   }
@@ -153,10 +157,6 @@
 
 @include max-width(100em) {
   .update {
-    &__controls {
-      max-width: rem(1200);
-      grid-gap: rem(30);
-    }
     &__bullet-block {
       grid-gap: rem(5);
       span {
@@ -186,7 +186,19 @@
 @include max-width(97em) {
   .update {
     &__controls {
-      bottom: 3.5rem;
+      bottom: 3.25rem;
+    }
+  }
+}
+
+@include max-width(87em) {
+  .update {
+    &__controls {
+      max-width: 28.25rem !important;
+      grid-gap: 2rem;
+    }
+    &__bullet-row-item:last-child {
+      margin-right: 0 !important;
     }
   }
 }
@@ -194,10 +206,50 @@
 @include max-width($tablet-media) {
   .update {
     &__controls {
-     padding: 0 rem(20);
+      max-width: rem(650) !important;
+     bottom: 2rem !important;
     }
     &__arrow {
-      display: none;
+      &:hover {
+        transform: translateX(0);
+      }
+    }
+    &__bullet-row-item {
+      max-width: rem(90);
+      width: rem(90);
+    }
+    &__bullet-row-info {
+      max-width: rem(90);
+      p {
+        font-size: rem(12) !important;
+      }
+    }
+  }
+}
+
+@include max-width(43.75em) {
+  .update {
+    &__controls {
+      grid-gap: rem(15);
+      max-width: rem(500) !important;
+    }
+  }
+}
+
+@include max-width(34.375em) {
+  .update {
+    &__arrow {
+      flex: 0 0 auto;
+      max-width: rem(30);
+    }
+    &__controls {
+      max-width: rem(420) !important;
+    }
+    &__bullet-row-item {
+      grid-gap: rem(5);
+    }
+    &__bullet-row-info {
+
     }
   }
 }
@@ -220,14 +272,9 @@
     &__controls {
       bottom: rem(50);
     }
-    &__bullet-block {
-      // flex: 0 1 24%;
-      img {
-        width: rem(45);
-        height: rem(45);
-      }
-      span {
-        display: none;
+    &__bullet-row-info {
+      p {
+        font-size: rem(14);
       }
     }
     &__descr {
@@ -253,6 +300,14 @@
         top: 0;
         left: 0;
       }
+    }
+  }
+}
+
+@include max-width(27.5em) {
+  .update {
+    &__controls {
+      max-width: rem(290) !important;
     }
   }
 }

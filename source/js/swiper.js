@@ -25,9 +25,28 @@ const newsRow = new Swiper('.news__wrapper', {
   }
 })
 
+const bulletRow = new Swiper('.update__bullet-wrapper', {
+  slidesPerView: 'auto',
+  freeMode: true,
+  spaceBetween: 20,
+  allowTouchMode: false,
+  breakpoints: {
+    1200: {
+      spaceBetween: 80
+    },
+    550: {
+      spaceBetween: 60,
+    }
+  },
+  watchSlidesProgress: true
+})
+
 const updateRow = new Swiper(updateWrapper, {
   slidesPerView: 'auto',
   effect: 'fade',
+  thumbs: {
+    swiper: bulletRow
+  },
   autoplay: {
     delay: 3000
   },
@@ -36,27 +55,19 @@ const updateRow = new Swiper(updateWrapper, {
     nextEl: '.update__arrow_next',
     prevEl: '.update__arrow_prev'
   },
-  pagination: {
-    el: '.update__bullets',
-    clickable: true,
-    // renderBullet: function (index, className) {
-    //   return `
-    //   <div class="${className} update__bullet-block">
-    //       <img src="${renderIcon(updateWrapper, index)}">
-    //     <span class="" > ${render(updateWrapper, index)}
-    //   </span>
-    //   </div>
-    //   `;
-    // },
-  }
-})
-
-const bulletRow = new Swiper('.update__bullet-wrapper', {
-  slidesPerView: 'auto',
-  navigation: {
-    nextEl: '.update__arrow_next',
-    prevEl: '.update__arrow_prev'
-  }
+  // pagination: {
+  //   el: '.update__bullets',
+  //   clickable: true,
+  //   // renderBullet: function (index, className) {
+  //   //   return `
+  //   //   <div class="${className} update__bullet-block">
+  //   //       <img src="${renderIcon(updateWrapper, index)}">
+  //   //     <span class="" > ${render(updateWrapper, index)}
+  //   //   </span>
+  //   //   </div>
+  //   //   `;
+  //   // },
+  // }
 })
 
 newsFilterBtn.forEach(btn => {
