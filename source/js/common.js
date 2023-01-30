@@ -7,9 +7,8 @@ const header = document.querySelector('.header'),
       body = document.body,
       sections = document.querySelectorAll('section'),
       sectionLinks = document.querySelectorAll('.side__list-link'),
-      navLinks = document.querySelectorAll('.nav-link');
-
-
+      navLinks = document.querySelectorAll('.nav-link'),
+      newsSliders = document.querySelectorAll('.news__row-item');
 
 const setPosition = () => {
   root.style.setProperty('--headerSpacing', header.clientHeight + 'px')
@@ -85,17 +84,4 @@ menu.addEventListener('click', (e) => {
     })
   }
 })
-
-AOS.init({
-  once: true
-})
-
-var mixer = mixitup('.news__row', {
-  selectors: {
-    target: '.news__row-item'
-},
-    animation: {
-        duration: 300
-    }
-});
 

@@ -4,6 +4,10 @@
   background-position: center;
   background-repeat: no-repeat;
   padding: rem(30) 0;
+  .mixitup-control-active {
+    box-shadow: 0 0 16px #70856b, inset 0 0 20px 2px #fff5d2;
+    background-color: rgba(83, 74, 65, .5);
+  }
   &__container {
     margin-inline: auto;
     max-width: calc(rem(1280) + $cont-padding);
@@ -33,9 +37,10 @@
   &__filter-btn {
     min-width: rem(205);
     min-height: rem(51);
-    background-size: 100% contain;
+    background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
+    border-radius: 20px;
     @include dfc;
     text-align: center;
     color: #b0a896;
@@ -44,11 +49,11 @@
     background-image: url('../../img/news/filter-btn-overlay.png');
     transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1);
     &:hover {
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
     &_active {
-      background-color: rgba(83, 74, 65, .5);
-      box-shadow: 0 0 16px #70856b, inset 0 0 20px 2px #fff5d2;
+
+      // box-shadow: 0 0 16px #70856b, inset 0 0 20px 2px #fff5d2;
       color: #ffffff;
     }
   }
@@ -153,6 +158,7 @@
       flex: 1 1 auto;
     }
     &__wrapper {
+      flex-direction: column;
       padding: 0 $cont-padding !important;
     }
     &__image {

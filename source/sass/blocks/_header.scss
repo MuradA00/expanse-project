@@ -172,6 +172,7 @@
         left: 50%;
         transform: translateX(-50%);
       }
+
     }
     &:hover span {
       color: #b76418;
@@ -182,6 +183,11 @@
       opacity: 0.7;
     }
     &_selected {
+      &:hover {
+        span {
+          color: #fff;
+        }
+      }
       span {
         opacity: 1;
       }

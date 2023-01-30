@@ -1,6 +1,7 @@
 const slides = document.querySelectorAll('.update__slider-item'),
       updateWrapper = document.querySelector('.update__wrapper'),
-      videoSliders = document.querySelectorAll('.update__slider-item');
+      videoSliders = document.querySelectorAll('.update__slider-item'),
+      newsFilterBtn = document.querySelectorAll('.news__filter-btn');
 
 const render = function(parent, index) {
   let renderParent = parent.querySelectorAll('.update__slider-item')[index].getAttribute('data-content');
@@ -38,16 +39,28 @@ const updateRow = new Swiper(updateWrapper, {
   pagination: {
     el: '.update__bullets',
     clickable: true,
-    renderBullet: function (index, className) {
-      return `
-      <div class="${className} update__bullet-block">
-          <img src="${renderIcon(updateWrapper, index)}">
-        <span class="" > ${render(updateWrapper, index)}
-      </span>
-      </div>
-      `;
-    },
+    // renderBullet: function (index, className) {
+    //   return `
+    //   <div class="${className} update__bullet-block">
+    //       <img src="${renderIcon(updateWrapper, index)}">
+    //     <span class="" > ${render(updateWrapper, index)}
+    //   </span>
+    //   </div>
+    //   `;
+    // },
   }
+})
+
+const bulletRow = new Swiper('.update__bullet-wrapper', {
+  slidesPerView: 'auto',
+  navigation: {
+    nextEl: '.update__arrow_next',
+    prevEl: '.update__arrow_prev'
+  }
+})
+
+newsFilterBtn.forEach(btn => {
+  btn.addEventListener('click', () => newsRow.slideTo(0, 400))
 })
 
 let videoBlocks = document.querySelectorAll('.update__video');

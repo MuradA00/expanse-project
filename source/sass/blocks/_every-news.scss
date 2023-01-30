@@ -10,6 +10,10 @@
   &__filter {
     margin-bottom: rem(50);
   }
+  .mixitup-control-active {
+    background-color: rgba(83, 74, 65, .5);
+    box-shadow: 0 0 16px #70856b, inset 0 0 20px 2px #fff5d2;
+  }
   &__row-link {
     display: flex;
     flex-direction: column;
@@ -20,9 +24,12 @@
   &__row {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     grid-gap: rem(40);
     margin-bottom: rem(40);
+    @include max-width($tablet-media) {
+      justify-content: center;
+    }
   }
   &__logo {
     max-width: rem(533);
@@ -63,6 +70,7 @@
     background-position: top  !important;
     background-color: #1b1b1b !important;
     background-size: 100% auto !important;
+
   }
 }
 

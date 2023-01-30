@@ -3,7 +3,7 @@ var allNewsMixer = mixitup('.every-news__row', {
     target: '.news__row-item'
 },
     animation: {
-        duration: 300
+        duration: 400
     }
 });
 
