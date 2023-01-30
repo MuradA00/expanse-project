@@ -47,9 +47,6 @@ const updateRow = new Swiper(updateWrapper, {
   thumbs: {
     swiper: bulletRow
   },
-  autoplay: {
-    delay: 3000
-  },
   fadeEffect: { crossFade: true },
   navigation: {
     nextEl: '.update__arrow_next',
