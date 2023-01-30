@@ -34,6 +34,13 @@
   &__title {
     margin-bottom: rem(40);
   }
+  &__row-link {
+    display: flex;
+    flex-direction: column;
+    &:hover .news__image img {
+      transform: scale(1.04);
+    }
+  }
   &__filter-btn {
     min-width: rem(205);
     min-height: rem(51);

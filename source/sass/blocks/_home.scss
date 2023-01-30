@@ -21,7 +21,7 @@
   &__scroll-down {
     position: absolute;
     z-index: 100;
-    bottom: -12.5%;
+    bottom: -9%;
     left: rem(30);
     transition: all 400ms ease;
   }
@@ -48,6 +48,7 @@
     }
   }
   &__download {
+    min-height: 5.5rem !important;
     background-image: url('../../img/header/yellow-btn-overlay.png')
   }
   &__actions {
@@ -66,40 +67,6 @@
   }
 }
 
-@include max-width($f-hd) {
-  // .home {
-  //   background-size: cover;
-  //   &__logo {
-  //     max-width: rem(550);
-  //     transform: translateX(-50px);
-  //     &:hover {
-  //       transform: scale(1.05) translateX(-50px);
-  //     }
-  //   }
-  //   h1 {
-  //     font-size: rem(55);
-  //   }
-  //   &__subheading {
-  //     font-size: rem(36);
-  //     margin-bottom: rem(15);
-  //   }
-  //   &__descr {
-  //     p {
-  //       font-size: 1.125rem;
-  //     }
-  //     max-width: rem(450);
-  //     margin-bottom: rem(60);
-  //   }
-  //   &__actions {
-  //     grid-gap: rem(20);
-  //     & > button {
-  //       min-width: rem(340);
-  //       min-height: rem(70);
-  //       font-size: rem(18);
-  //     }
-  //   }
-  // }
-}
 
 @include max-width(90em) {
   .home {
