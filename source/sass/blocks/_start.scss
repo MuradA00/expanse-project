@@ -2,7 +2,7 @@
   background-image: url('../../img/start/bg-start.jpg');
   background-size: cover;
   background-position: center;
-  padding: 4rem 0;
+
   &__flex {
     display: flex;
     grid-gap: 1.25rem;
@@ -17,9 +17,6 @@
     align-items: center;
     text-align: center;
   }
-  &__download {
-    transform: translateY(5px);
-  }
   &__title {
     margin-bottom: rem(60);
   }
@@ -33,6 +30,11 @@
     background-image: url('../../img/start/icon-overlay.png');
     background-size: 100% 100%;
     margin-bottom: rem(40);
+  }
+  &__register {
+    span {
+      transform: translateY(-3px)
+    }
   }
   &__flex-title {
     @include gradient-text;
@@ -57,11 +59,6 @@
       min-width: rem(404);
       min-height: rem(80);
       font-size: rem(21);
-      // @include max-width($f-hd) {
-      //   min-width: rem(303);
-      //   min-height: rem(70);
-      //   font-size: 1rem;
-      // }
     }
   }
 }

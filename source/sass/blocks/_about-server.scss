@@ -31,6 +31,14 @@
   &__wrapper {
     max-width: rem(1283);
   }
+  &__controls {
+    position: initial;
+    transform: translate(0, 0);
+    margin-bottom: rem(85);
+  }
+  &__bullet-row {
+    display: flex;
+  }
   &__navigation {
     @include df;
     max-width: rem(1210);
@@ -38,6 +46,9 @@
   }
   &__arrow {
     cursor: pointer;
+  }
+  &__row-item {
+    max-width: rem(162);
   }
   &__bullet-block {
     background-color: transparent !important;
@@ -87,6 +98,14 @@
   }
 }
 
+@include max-width(87em) {
+  .about-slider {
+    &__controls {
+      max-width: 100% !important;
+    }
+  }
+}
+
 @include max-width($tablet-media) {
   .about-server {
     &__logo {
@@ -113,11 +132,12 @@
     &__pagination {
       margin-bottom: rem(50);
     }
-    &__bullet-block {
+    &__bullet-row-icon {
       max-width: rem(100);
-      span {
-        display: none;
-      }
+      max-height: rem(100);
+    }
+    &__arrow {
+      flex: 0 0 auto;
     }
   }
 }
@@ -135,8 +155,13 @@
     }
   }
   .about-slider {
-    &__bullet-block {
-      max-width: rem(70);
+    &__arrow {
+      display: block !important;
+    }
+    &__row-item {
+      --bulletAspect: rem(90);
+      min-height: var(--bulletAspect);
+      min-width: var(--bulletAspect);
     }
     &__item-heading {
       font-size: rem(24);

@@ -3,3 +3,10 @@
   height: 100%;
   @include df;
 }
+
+.padding-top-header {
+  padding-top: calc(var(--headerSpacing) / 2) !important;
+  @include max-width($mob-media) {
+    padding-top: 0 !important;
+  }
+  }

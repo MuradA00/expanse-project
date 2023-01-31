@@ -48,8 +48,15 @@
     }
   }
   &__download {
-    min-height: 5.5rem !important;
-    background-image: url('../../img/header/yellow-btn-overlay.png')
+    background-image: url('../../img/header/yellow-btn-overlay.png');
+    span {
+      transform: translateY(-3.5px);
+    }
+  }
+  &__register {
+    span {
+      transform: translateY(-4px);
+    }
   }
   &__actions {
     @include df;
@@ -58,7 +65,7 @@
       background-repeat: no-repeat;
       background-size: 100% 100%;
       min-width: rem(454);
-      min-height: rem(100);
+      min-height: 5rem;
       @include dfc;
       text-align: center;
       font-size: rem(25);
@@ -88,6 +95,11 @@
         transform: translateX(0);
       }
     }
+    &__download, .home__register {
+      span {
+        transform: translateY(-2px);
+      }
+    }
     &__actions {
       flex-direction: column;
       grid-gap: rem(5);
@@ -112,6 +124,7 @@
 @include max-width($mob-media) {
   .home {
     padding-top: 0;
+    background-position: left;
     &__logo {
       display: block;
       max-width: rem(300);

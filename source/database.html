@@ -3,7 +3,7 @@
 @@include("_head.html",{})
 @@include("_header.html",{})
 @@include("_menu.html",{})
-<body class="news-body footer_long">
+<body class="db-body news-body footer_long">
   <main>
    <div class="database">
     <div class="database__container main-container">
@@ -23,8 +23,11 @@
               <div class="database__column">
                 <ul class="database__items">
                   <li class="database__items-block database__items-block_selected">
-                    <a href="#" class="database__items-wrapper">
-                      <div class="database__icon">
+                    <a href="#" class="database__items-wrapper" data-open-tab="">
+                      <div class="database__items-hidden-heading">
+                        General Information
+                      </div>
+                      <div class="database__icon icon-block">
                         <img src="img/about-server/updated-graphics.png" alt="updated-icon">
                       </div>
                       <div class="database__descr">
@@ -38,8 +41,11 @@
                     </a>
                   </li>
                   <li class="database__items-block">
-                    <a href="#" class="database__items-wrapper">
-                      <div class="database__icon">
+                    <a href="#" class="database__items-wrapper" data-open-tab="">
+                      <div class="database__items-hidden-heading">
+                        RATES
+                      </div>
+                      <div class="database__icon icon-block">
                         <img src="img/about-server/gameplay-icon.png" alt="updated-icon">
                       </div>
                       <div class="database__descr">
@@ -53,8 +59,11 @@
                     </a>
                   </li>
                   <li class="database__items-block">
-                    <a href="#" class="database__items-wrapper">
-                      <div class="database__icon">
+                    <a href="#" class="database__items-wrapper" data-open-tab="">
+                      <div class="database__items-hidden-heading">
+                        ENCHANTMENT RATES
+                      </div>
+                      <div class="database__icon icon-block">
                         <img src="img/about-server/loyality-icon.png" alt="updated-icon">
                       </div>
                       <div class="database__descr">
@@ -68,8 +77,11 @@
                     </a>
                   </li>
                   <li class="database__items-block">
-                    <a href="#" class="database__items-wrapper">
-                      <div class="database__icon">
+                    <a href="#" class="database__items-wrapper" data-open-tab="">
+                      <div class="database__items-hidden-heading">
+                        EVENTS
+                      </div>
+                      <div class="database__icon icon-block">
                         <img src="img/about-server/locations-icon.png" alt="updated-icon">
                       </div>
                       <div class="database__descr">
@@ -83,8 +95,11 @@
                     </a>
                   </li>
                   <li class="database__items-block">
-                    <a href="#" class="database__items-wrapper">
-                      <div class="database__icon">
+                    <a href="#" class="database__items-wrapper" data-open-tab="">
+                      <div class="database__items-hidden-heading">
+                        Text
+                      </div>
+                      <div class="database__icon icon-block">
                         <img src="img/database/plug-icon.png" alt="plug-icon">
                       </div>
                       <div class="database__descr">
@@ -98,8 +113,11 @@
                     </a>
                   </li>
                   <li class="database__items-block">
-                    <a href="#" class="database__items-wrapper">
-                      <div class="database__icon">
+                    <a href="#" class="database__items-wrapper" data-open-tab="">
+                      <div class="database__items-hidden-heading">
+                        Text
+                      </div>
+                      <div class="database__icon icon-block">
                         <img src="img/database/plug-icon.png" alt="plug-icon">
                       </div>
                       <div class="database__descr">
@@ -113,8 +131,11 @@
                     </a>
                   </li>
                   <li class="database__items-block">
-                    <a href="#" class="database__items-wrapper">
-                      <div class="database__icon">
+                    <a href="#" class="database__items-wrapper" data-open-tab="">
+                      <div class="database__items-hidden-heading">
+                        Text
+                      </div>
+                      <div class="database__icon icon-block">
                         <img src="img/database/plug-icon.png" alt="plug-icon">
                       </div>
                       <div class="database__descr">
@@ -130,158 +151,625 @@
                 </ul>
               </div>
             </sidebar>
-            <div class="database__content">
-              <div class="database__content-heading">
-                <span>Заголовок любой новости здесь</span>
-                <img src="img/news-page/news-heading-icon.png" alt="heading-pattern">
+            <div class="database__content-wrapper">
+              <div class="database__content" data-name-tab="">
+                <div class="database__content-heading">
+                  <span>Заголовок любой новости здесь</span>
+                  <img src="img/news-page/news-heading-icon.png" alt="heading-pattern">
+                </div>
+                <div class="database__banner">
+                  <picture>
+                    <source type="image/webp" srcset="img/news-page/image-banner.webp">
+                    <img  src="img/news-page/image-banner.png" alt="database-banner-image-large">
+                  </picture>
+                </div>
+                <div class="database__content-info">
+                  <p>
+                    Рейдовые боссы будут появляться относительно времени сервера, вы можете использовать команду /time, чтобы узнать время сервера. Эпические рейдовые боссы Queen Ant, Core, Orfen и Zaken имеют 80-й уровень, а Baium и Antharas — 85-й уровень. Мы также отмечаем, что со всех рейдовых боссов (обычных и эпических) выпадают мешочки L-Coin.
+                  </p>
+                </div>
+                <div class="database__columns">
+                  <div class="database__columns-item">
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        from
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
+                    </div>
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        from
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
+                    </div>
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        from
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
+                    </div>
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        from
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
+                    </div>
+                  </div>
+                  <div class="database__columns-item">
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        to
+                      </div>
+                      <div class="database__output">
+                        243
+                      </div>
+                    </div>
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        to
+                      </div>
+                      <div class="database__output">
+                        243
+                      </div>
+                    </div>
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        to
+                      </div>
+                      <div class="database__output">
+                        243
+                      </div>
+                    </div>
+                    <div class="database__columns-block database__columns-block_bonus">
+                      <div class="database__input">
+                        to
+                      </div>
+                      <div class="database__output">
+                        243
+                      </div>
+                    </div>
+                  </div>
+                  <div class="database__columns-item">
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        bonus
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
+                    </div>
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        bonus
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
+                    </div>
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        bonus
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
+                    </div>
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        bonus
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="database__headings">
+                  <div class="database__heading-item">
+                    <div class="database__heading-icon">
+                      <img src="img/title/title-label.png" alt="heading-icon">
+                    </div>
+                    <span>
+                      Рейдовые боссы
+                    </span>
+                  </div>
+                  <div class="database__heading-item">
+                    <div class="database__heading-icon">
+                      <img src="img/title/title-label.png" alt="heading-icon">
+                    </div>
+                    <span>
+                      Рейдовые боссы
+                    </span>
+                  </div>
+                  <div class="database__heading-item">
+                    <div class="database__heading-icon">
+                      <img src="img/title/title-label.png" alt="heading-icon">
+                    </div>
+                    <span>
+                      Baium
+                    </span>
+                  </div>
+                  <div class="database__heading-item">
+                    <div class="database__heading-icon">
+                      <img src="img/title/title-label.png" alt="heading-icon">
+                    </div>
+                    <span>
+                      Antharas
+                    </span>
+                  </div>
+                </div>
               </div>
-              <div class="database__banner">
-                <picture>
-                  <source type="image/webp" srcset="img/news-page/image-banner.webp">
-                  <img  src="img/news-page/image-banner.png" alt="database-banner-image-large">
-                </picture>
+              <div class="database__content" data-name-tab="">
+                <div class="database__content-heading">
+                  <span>Заголовок любой новости здесь</span>
+                  <img src="img/news-page/news-heading-icon.png" alt="heading-pattern">
+                </div>
+                <div class="database__banner">
+                  <picture>
+                    <source type="image/webp" srcset="img/news-page/image-banner.webp">
+                    <img  src="img/news-page/image-banner.png" alt="database-banner-image-large">
+                  </picture>
+                </div>
+                <div class="database__content-info">
+                  <p>
+                    Рейдовые боссы будут появляться относительно времени сервера, вы можете использовать команду /time, чтобы узнать время сервера. Эпические рейдовые боссы Queen Ant, Core, Orfen и Zaken имеют 80-й уровень, а Baium и Antharas — 85-й уровень. Мы также отмечаем, что со всех рейдовых боссов (обычных и эпических) выпадают мешочки L-Coin.
+                  </p>
+                </div>
+                <div class="database__columns">
+                  <div class="database__columns-item">
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        from
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
+                    </div>
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        from
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
+                    </div>
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        from
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
+                    </div>
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        from
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
+                    </div>
+                  </div>
+                  <div class="database__columns-item">
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        to
+                      </div>
+                      <div class="database__output">
+                        243
+                      </div>
+                    </div>
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        to
+                      </div>
+                      <div class="database__output">
+                        243
+                      </div>
+                    </div>
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        to
+                      </div>
+                      <div class="database__output">
+                        243
+                      </div>
+                    </div>
+                    <div class="database__columns-block database__columns-block_bonus">
+                      <div class="database__input">
+                        to
+                      </div>
+                      <div class="database__output">
+                        243
+                      </div>
+                    </div>
+                  </div>
+                  <div class="database__columns-item">
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        bonus
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
+                    </div>
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        bonus
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
+                    </div>
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        bonus
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
+                    </div>
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        bonus
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="database__headings">
+                  <div class="database__heading-item">
+                    <div class="database__heading-icon">
+                      <img src="img/title/title-label.png" alt="heading-icon">
+                    </div>
+                    <span>
+                      Рейдовые боссы
+                    </span>
+                  </div>
+                  <div class="database__heading-item">
+                    <div class="database__heading-icon">
+                      <img src="img/title/title-label.png" alt="heading-icon">
+                    </div>
+                    <span>
+                      Рейдовые боссы
+                    </span>
+                  </div>
+                  <div class="database__heading-item">
+                    <div class="database__heading-icon">
+                      <img src="img/title/title-label.png" alt="heading-icon">
+                    </div>
+                    <span>
+                      Baium
+                    </span>
+                  </div>
+                  <div class="database__heading-item">
+                    <div class="database__heading-icon">
+                      <img src="img/title/title-label.png" alt="heading-icon">
+                    </div>
+                    <span>
+                      Antharas
+                    </span>
+                  </div>
+                </div>
               </div>
-              <div class="database__content-info">
-                <p>
-                  Рейдовые боссы будут появляться относительно времени сервера, вы можете использовать команду /time, чтобы узнать время сервера. Эпические рейдовые боссы Queen Ant, Core, Orfen и Zaken имеют 80-й уровень, а Baium и Antharas — 85-й уровень. Мы также отмечаем, что со всех рейдовых боссов (обычных и эпических) выпадают мешочки L-Coin.
-                </p>
+              <div class="database__content" data-name-tab="">
+                <div class="database__content-heading">
+                  <span>Заголовок любой новости здесь</span>
+                  <img src="img/news-page/news-heading-icon.png" alt="heading-pattern">
+                </div>
+                <div class="database__banner">
+                  <picture>
+                    <source type="image/webp" srcset="img/news-page/image-banner.webp">
+                    <img  src="img/news-page/image-banner.png" alt="database-banner-image-large">
+                  </picture>
+                </div>
+                <div class="database__content-info">
+                  <p>
+                    Рейдовые боссы будут появляться относительно времени сервера, вы можете использовать команду /time, чтобы узнать время сервера. Эпические рейдовые боссы Queen Ant, Core, Orfen и Zaken имеют 80-й уровень, а Baium и Antharas — 85-й уровень. Мы также отмечаем, что со всех рейдовых боссов (обычных и эпических) выпадают мешочки L-Coin.
+                  </p>
+                </div>
+                <div class="database__columns">
+                  <div class="database__columns-item">
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        from
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
+                    </div>
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        from
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
+                    </div>
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        from
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
+                    </div>
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        from
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
+                    </div>
+                  </div>
+                  <div class="database__columns-item">
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        to
+                      </div>
+                      <div class="database__output">
+                        243
+                      </div>
+                    </div>
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        to
+                      </div>
+                      <div class="database__output">
+                        243
+                      </div>
+                    </div>
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        to
+                      </div>
+                      <div class="database__output">
+                        243
+                      </div>
+                    </div>
+                    <div class="database__columns-block database__columns-block_bonus">
+                      <div class="database__input">
+                        to
+                      </div>
+                      <div class="database__output">
+                        243
+                      </div>
+                    </div>
+                  </div>
+                  <div class="database__columns-item">
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        bonus
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
+                    </div>
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        bonus
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
+                    </div>
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        bonus
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
+                    </div>
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        bonus
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="database__headings">
+                  <div class="database__heading-item">
+                    <div class="database__heading-icon">
+                      <img src="img/title/title-label.png" alt="heading-icon">
+                    </div>
+                    <span>
+                      Рейдовые боссы
+                    </span>
+                  </div>
+                  <div class="database__heading-item">
+                    <div class="database__heading-icon">
+                      <img src="img/title/title-label.png" alt="heading-icon">
+                    </div>
+                    <span>
+                      Рейдовые боссы
+                    </span>
+                  </div>
+                  <div class="database__heading-item">
+                    <div class="database__heading-icon">
+                      <img src="img/title/title-label.png" alt="heading-icon">
+                    </div>
+                    <span>
+                      Baium
+                    </span>
+                  </div>
+                  <div class="database__heading-item">
+                    <div class="database__heading-icon">
+                      <img src="img/title/title-label.png" alt="heading-icon">
+                    </div>
+                    <span>
+                      Antharas
+                    </span>
+                  </div>
+                </div>
               </div>
-              <div class="database__columns">
-                <div class="database__columns-item">
-                  <div class="database__columns-block">
-                    <div class="database__input">
-                      from
+              <div class="database__content" data-name-tab="">
+                <div class="database__content-heading">
+                  <span>Заголовок любой новости здесь</span>
+                  <img src="img/news-page/news-heading-icon.png" alt="heading-pattern">
+                </div>
+                <div class="database__banner">
+                  <picture>
+                    <source type="image/webp" srcset="img/news-page/image-banner.webp">
+                    <img  src="img/news-page/image-banner.png" alt="database-banner-image-large">
+                  </picture>
+                </div>
+                <div class="database__content-info">
+                  <p>
+                    Рейдовые боссы будут появляться относительно времени сервера, вы можете использовать команду /time, чтобы узнать время сервера. Эпические рейдовые боссы Queen Ant, Core, Orfen и Zaken имеют 80-й уровень, а Baium и Antharas — 85-й уровень. Мы также отмечаем, что со всех рейдовых боссов (обычных и эпических) выпадают мешочки L-Coin.
+                  </p>
+                </div>
+                <div class="database__columns">
+                  <div class="database__columns-item">
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        from
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
                     </div>
-                    <div class="database__output">
-                      50
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        from
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
+                    </div>
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        from
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
+                    </div>
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        from
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
                     </div>
                   </div>
-                  <div class="database__columns-block">
-                    <div class="database__input">
-                      from
+                  <div class="database__columns-item">
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        to
+                      </div>
+                      <div class="database__output">
+                        243
+                      </div>
                     </div>
-                    <div class="database__output">
-                      50
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        to
+                      </div>
+                      <div class="database__output">
+                        243
+                      </div>
+                    </div>
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        to
+                      </div>
+                      <div class="database__output">
+                        243
+                      </div>
+                    </div>
+                    <div class="database__columns-block database__columns-block_bonus">
+                      <div class="database__input">
+                        to
+                      </div>
+                      <div class="database__output">
+                        243
+                      </div>
                     </div>
                   </div>
-                  <div class="database__columns-block">
-                    <div class="database__input">
-                      from
+                  <div class="database__columns-item">
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        bonus
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
                     </div>
-                    <div class="database__output">
-                      50
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        bonus
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
                     </div>
-                  </div>
-                  <div class="database__columns-block">
-                    <div class="database__input">
-                      from
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        bonus
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
                     </div>
-                    <div class="database__output">
-                      50
+                    <div class="database__columns-block">
+                      <div class="database__input">
+                        bonus
+                      </div>
+                      <div class="database__output">
+                        50
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="database__columns-item">
-                  <div class="database__columns-block">
-                    <div class="database__input">
-                      to
+                <div class="database__headings">
+                  <div class="database__heading-item">
+                    <div class="database__heading-icon">
+                      <img src="img/title/title-label.png" alt="heading-icon">
                     </div>
-                    <div class="database__output">
-                      243
-                    </div>
+                    <span>
+                      Рейдовые боссы
+                    </span>
                   </div>
-                  <div class="database__columns-block">
-                    <div class="database__input">
-                      to
+                  <div class="database__heading-item">
+                    <div class="database__heading-icon">
+                      <img src="img/title/title-label.png" alt="heading-icon">
                     </div>
-                    <div class="database__output">
-                      243
-                    </div>
+                    <span>
+                      Рейдовые боссы
+                    </span>
                   </div>
-                  <div class="database__columns-block">
-                    <div class="database__input">
-                      to
+                  <div class="database__heading-item">
+                    <div class="database__heading-icon">
+                      <img src="img/title/title-label.png" alt="heading-icon">
                     </div>
-                    <div class="database__output">
-                      243
-                    </div>
+                    <span>
+                      Baium
+                    </span>
                   </div>
-                  <div class="database__columns-block database__columns-block_bonus">
-                    <div class="database__input">
-                      to
+                  <div class="database__heading-item">
+                    <div class="database__heading-icon">
+                      <img src="img/title/title-label.png" alt="heading-icon">
                     </div>
-                    <div class="database__output">
-                      243
-                    </div>
+                    <span>
+                      Antharas
+                    </span>
                   </div>
-                </div>
-                <div class="database__columns-item">
-                  <div class="database__columns-block">
-                    <div class="database__input">
-                      bonus
-                    </div>
-                    <div class="database__output">
-                      50
-                    </div>
-                  </div>
-                  <div class="database__columns-block">
-                    <div class="database__input">
-                      bonus
-                    </div>
-                    <div class="database__output">
-                      50
-                    </div>
-                  </div>
-                  <div class="database__columns-block">
-                    <div class="database__input">
-                      bonus
-                    </div>
-                    <div class="database__output">
-                      50
-                    </div>
-                  </div>
-                  <div class="database__columns-block">
-                    <div class="database__input">
-                      bonus
-                    </div>
-                    <div class="database__output">
-                      50
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="database__headings">
-                <div class="database__heading-item">
-                  <div class="database__heading-icon">
-                    <img src="img/title/title-label.png" alt="heading-icon">
-                  </div>
-                  <span>
-                    Рейдовые боссы
-                  </span>
-                </div>
-                <div class="database__heading-item">
-                  <div class="database__heading-icon">
-                    <img src="img/title/title-label.png" alt="heading-icon">
-                  </div>
-                  <span>
-                    Рейдовые боссы
-                  </span>
-                </div>
-                <div class="database__heading-item">
-                  <div class="database__heading-icon">
-                    <img src="img/title/title-label.png" alt="heading-icon">
-                  </div>
-                  <span>
-                    Baium
-                  </span>
-                </div>
-                <div class="database__heading-item">
-                  <div class="database__heading-icon">
-                    <img src="img/title/title-label.png" alt="heading-icon">
-                  </div>
-                  <span>
-                    Antharas
-                  </span>
                 </div>
               </div>
             </div>

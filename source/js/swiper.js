@@ -20,16 +20,18 @@ const newsRow = new Swiper('.news__wrapper', {
   spaceBetween: 20,
   breakpoints: {
     1200: {
-      spaceBetween: 65
+      spaceBetween: 80
     }
   }
 })
 
 const bulletRow = new Swiper('.update__bullet-wrapper', {
+  slideToClickedSlide: true,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
   slidesPerView: 'auto',
   freeMode: true,
   spaceBetween: 20,
-  allowTouchMode: false,
   breakpoints: {
     1200: {
       spaceBetween: 80
@@ -41,6 +43,8 @@ const bulletRow = new Swiper('.update__bullet-wrapper', {
   watchSlidesProgress: true
 })
 
+
+
 const updateRow = new Swiper(updateWrapper, {
   slidesPerView: 'auto',
   effect: 'fade',
@@ -51,34 +55,10 @@ const updateRow = new Swiper(updateWrapper, {
   navigation: {
     nextEl: '.update__arrow_next',
     prevEl: '.update__arrow_prev'
-  },
-  // pagination: {
-  //   el: '.update__bullets',
-  //   clickable: true,
-  //   // renderBullet: function (index, className) {
-  //   //   return `
-  //   //   <div class="${className} update__bullet-block">
-  //   //       <img src="${renderIcon(updateWrapper, index)}">
-  //   //     <span class="" > ${render(updateWrapper, index)}
-  //   //   </span>
-  //   //   </div>
-  //   //   `;
-  //   // },
-  // }
+  }
 })
 
 newsFilterBtn.forEach(btn => {
   btn.addEventListener('click', () => newsRow.slideTo(0, 400))
 })
 
-let videoBlocks = document.querySelectorAll('.update__video');
-
-videoBlocks.forEach(videoBlock => {
-  videoBlock.pause();
-})
-
-updateRow.on('slideChange', function() {
-  videoBlocks.forEach(video => {
-    video.play();
-  })
-})

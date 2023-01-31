@@ -3,14 +3,12 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: rem(30) 0;
   .mixitup-control-active {
     box-shadow: 0 0 16px #70856b, inset 0 0 20px 2px #fff5d2;
     background-color: rgba(83, 74, 65, .5);
   }
   &__container {
     margin-inline: auto;
-    max-width: calc(rem(1280) + $cont-padding);
     overflow-x: visible;
   }
   &__filter {
@@ -33,6 +31,7 @@
   }
   &__title {
     margin-bottom: rem(40);
+
   }
   &__row-link {
     display: flex;
@@ -86,6 +85,9 @@
   }
   &__row-item {
     flex: 0 1 rem(377);
+    &:hover .news__row-title {
+      color: #b76418;
+    }
     &_update {
       .news__row-name {
         color: #b68dd4;
@@ -120,6 +122,7 @@
     color: #fff;
     margin-bottom: 1rem;
     font-size: rem(20);
+    transition: all 400ms cubic-bezier(0.19, 1, 0.22, 1);
   }
   &__row-inner {
     flex: 1;

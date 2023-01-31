@@ -27,6 +27,11 @@
   &__body {
     margin-bottom: rem(150);
   }
+  &__title {
+    &::before {
+      content: none;
+    }
+  }
   &__logo {
     max-width: rem(656);
     margin-bottom: rem(-20px);
@@ -69,11 +74,12 @@
       background-position: center;
       z-index: 5;
     }
+
   }
   &__subheading {
     max-width: rem(640);
     margin-inline: auto;
-    margin-bottom: rem(40);
+    margin-bottom: rem(20);
     p {
       opacity: 0.35;
       font-family: var(--ff-intro);
@@ -85,8 +91,8 @@
     grid-gap: 1rem;
   }
   &__timer-item {
-    min-height: rem(180);
-    min-width: rem(180);
+    min-height: rem(170);
+    min-width: rem(170);
     text-align: center;
     background-position: center;
     background-repeat: no-repeat;
@@ -106,15 +112,35 @@
       transform: translate(-50%, -50%);
       border-radius: 50%;
     }
+    &::after {
+      @include pseudo;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url('../../img/promo-section/timer-row-shadow.png');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      width: 100%;
+      height: 100%;
+    }
   }
   &__item-number {
     position: relative;
     z-index: 10;
     @include df;
     flex-direction: column;
+    line-height: 100%;
     span {
-      color: #9d9583;
-      font-size: rem(14.5);
+      &:nth-child(1) {
+        color: #fff;
+        font-size: rem(50);
+        line-height: 100%;
+      }
+      &:nth-child(2) {
+        color: #9d9583;
+        font-size: rem(14.5);
+        line-height: 100%;
+      }
     }
    }
    &__title {
@@ -138,12 +164,15 @@
     @include dfc;
    }
    &__register {
-    min-width: rem(424);
-    min-height: rem(80);
+    min-width: rem(414);
+    min-height: rem(70);
     background-position: center;
     background-size: 100% 100%;
     font-size: rem(20);
     color: #3d2c17;
+    span {
+      transform: translateY(-3px);
+    }
    }
 }
 
@@ -173,7 +202,12 @@
     &__item-number {
       font-size: rem(25);
       span {
-        font-size: rem(14) !important;
+        &:nth-child(1) {
+          font-size: rem(25);
+        }
+        &:nth-child(2) {
+          font-size: rem(10) !important;
+        }
       }
     }
   }
@@ -181,7 +215,7 @@
 
 @include max-width($mob-media) {
   .promo-page {
-    background-position: right;
+    background-position: center;
   }
   .promo {
     margin-bottom: rem(50);
@@ -189,11 +223,11 @@
       padding: 5rem 0;
     }
     &__timer-item {
-      min-width: rem(110);
-      min-height: rem(110);
+      min-width: rem(80);
+      min-height: rem(80);
       &::before {
-        width: rem(62);
-        height: rem(62);
+        width: rem(42);
+        height: rem(42);
       }
     }
     &__pattern {
@@ -222,7 +256,7 @@
     }
     &__timer-row {
       flex-wrap: wrap;
-      grid-gap: rem(10);
+      grid-gap: rem(5);
     }
     &__inner {
       p {
@@ -230,9 +264,14 @@
       }
     }
     &__item-number {
-      font-size: rem(20);
+
       span {
-        font-size: rem(10) !important;
+        &:nth-child(1) {
+          font-size: rem(20) !important;
+        }
+        &:nth-child(2) {
+          font-size: rem(9) !important;
+        }
       }
     }
   }

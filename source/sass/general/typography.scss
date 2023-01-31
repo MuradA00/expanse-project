@@ -35,6 +35,11 @@
       transform: translateY(0);
       display: block;
     }
+    @include max-width($mob-media) {
+      &::before, &::after {
+        content: none;
+      }
+    }
   }
   @include max-width(92.5em) {
     display: flex;
@@ -62,8 +67,7 @@
   @include max-width($mob-media) {
     font-size: rem(30);
     &::before, &::after {
-      width: rem(25);
-      height: rem(10);
+      content: none;
     }
   }
   @include max-width(23.75em) {

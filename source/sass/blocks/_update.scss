@@ -16,7 +16,7 @@
     @include df;
     grid-gap: rem(60);
     justify-content: space-between;
-    bottom: rem(100);
+    bottom: rem(70);
     max-width: rem(1392);
     left: 50%;
     transform: translate(-50%, 0);
@@ -48,6 +48,8 @@
     max-width: rem(125);
     opacity: .5;
     transition: all 300ms ease;
+    pointer-events: auto !important;
+    cursor: pointer;
   }
   &__bullet-row-info {
     text-align: center;
@@ -152,6 +154,7 @@
     position: relative;
     z-index: 10;
     padding-bottom: rem(100);
+    padding-top: calc(var(--headerSpacing)/2)!important
   }
 }
 
@@ -229,6 +232,14 @@
 
 @include max-width(43.75em) {
   .update {
+    &__bullet-row-icon {
+      min-width: 4.4rem !important;
+      min-height: 4.4rem !important;
+      img {
+        max-height: rem(35) !important;
+        max-width: rem(35) !important;
+      }
+    }
     &__controls {
       grid-gap: rem(15);
       max-width: rem(500) !important;
